@@ -9,7 +9,7 @@ import json
 import re
 
 
-app = Flask(__name__)
+application = Flask(__name__)
 
 
 def parse_request(req):
@@ -25,14 +25,14 @@ def parse_request(req):
     return payload
 
 
-@app.route('/', methods=['GET'])
+@application.route('/', methods=['GET'])
 def index():
     """
     Go to localhost:5000 to see a message
     """
     return ('This is a website.', 200, None)
 
-@app.route('/api/build', methods=['POST'])
+@application.route('/api/build', methods=['POST'])
 def build_test():
     """
     test build
@@ -43,4 +43,4 @@ def build_test():
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
-    app.run(debug=True, use_reloader=True)
+    application.run(debug=True, use_reloader=True)
