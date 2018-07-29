@@ -12,7 +12,7 @@ git remote add herokuautobild https://soo-underground:S2shk442@github.com/soo-un
 echo "4"
 git remote -v
 echo "5"
-git push --force herokutautobuild master
+git push --force herokuautobuild master
 
 
 
