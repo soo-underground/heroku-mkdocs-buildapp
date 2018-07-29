@@ -39,7 +39,7 @@ def build_test():
     """
 #    payload = parse_request(request)
     print ('hello world')
-    subprocess.call(['build.bat'], shell=True)
+    subprocess.call(['build.sh'], shell=True)
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
