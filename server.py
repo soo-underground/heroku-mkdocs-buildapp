@@ -37,7 +37,7 @@ def build_test(passwd):
     """
     test build
     """
-    payload = parse_request(request)
+#    payload = parse_request(request)
     print ('hello world')
     print ('password is ' + passwd)
     subprocess.call(['chmod a+x ../../app/build.sh ' + passwd], shell=True)
