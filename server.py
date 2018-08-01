@@ -9,6 +9,11 @@ import json
 import re
 
 
+subprocess.call(['chmod a+x ../../app/1-source-retrieve.sh'], shell=True)
+subprocess.call(['chmod a+x ../../app/2-build.sh'], shell=True)
+subprocess.call(['chmod a+x ../../app/3-artifacts-push.sh'], shell=True)
+
+
 application = Flask(__name__)
 
 
@@ -40,8 +45,10 @@ def build_test(passwd):
 #    payload = parse_request(request)
     print ('hello world')
     print ('password is ' + passwd)
-    subprocess.call(['chmod a+x ../../app/build.sh '], shell=True)
-    subprocess.call(['../../app/build.sh ' + passwd], shell=True)
+    
+    subprocess.call(['../../app/1-source-retrieve.sh '], shell=True)
+    subprocess.call(['../../app/2-build.sh '], shell=True)
+    subprocess.call(['../../app/3-artifacts-push.sh ' + passwd], shell=True)
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
