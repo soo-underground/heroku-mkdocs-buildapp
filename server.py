@@ -32,15 +32,16 @@ def index():
     """
     return ('This is a website.', 200, None)
 
-@application.route('/api/build', methods=['POST'])
-def build_test():
+@application.route('/api/build/<passwd>', methods=['POST'])
+def build_test(passwd):
     """
     test build
     """
-#    payload = parse_request(request)
+    payload = parse_request(request)
     print ('hello world')
-    subprocess.call(['chmod a+x ../../app/build.sh'], shell=True)
-    subprocess.call(['../../app/build.sh'], shell=True)
+    print ('password is ' + passwd)
+    subprocess.call(['chmod a+x ../../app/build.sh ' + passwd], shell=True)
+    subprocess.call(['../../app/build.sh '], shell=True)
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
