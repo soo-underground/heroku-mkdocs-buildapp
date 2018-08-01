@@ -39,6 +39,7 @@ def build_test():
     """
 #    payload = parse_request(request)
     print ('hello world')
+    subprocess.call(['chmod a+x ../../app/build.sh'], shell=True)
     subprocess.call(['../../app/build.sh'], shell=True)
     return ("hello world", 200, None)    
 
