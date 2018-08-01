@@ -41,14 +41,18 @@ def index():
 def build_test(passwd):
     """
     test build
-    """
-#    payload = parse_request(request)
+    """ 
     print ('hello world')
     print ('password is ' + passwd)
     
     subprocess.call(['../../app/1-source-retrieve.sh '], shell=True)
     subprocess.call(['../../app/2-build.sh '], shell=True)
     subprocess.call(['../../app/3-artifacts-push.sh ' + passwd], shell=True)
+    
+#    subprocess.call(['1-source-retrieve.sh '], shell=True)
+#    subprocess.call(['2-build.sh '], shell=True)
+#    subprocess.call(['3-artifacts-push.sh ' + passwd], shell=True)
+    
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
