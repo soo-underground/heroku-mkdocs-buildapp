@@ -3,7 +3,7 @@ ls
 git init
 echo "git initiated"
 git add .
-echo "repo added"
+echo "repo added" #delay
 git config user.email "bordovskiy92@gmail.com"
 git config user.name "soo-underground"
 git commit -m "commit from aws codebuild"
@@ -13,4 +13,5 @@ git remote add herokuautobild https://soo-underground:$1@github.com/soo-undergro
 echo "password accepted, remote added"
 git remote -v
 git push --force origin master
+ls
 echo "artifacts pushed"
