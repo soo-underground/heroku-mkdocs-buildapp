@@ -13,5 +13,4 @@ git remote add herokuautobild https://soo-underground:$1@github.com/soo-undergro
 echo "password accepted, remote added"
 git remote -v
 git push --force origin master
-ls
 echo "artifacts pushed"
