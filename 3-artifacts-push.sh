@@ -1,5 +1,6 @@
 cd docpage-source/my-project/site
 ls
+rm -rf .git
 git init
 echo "git initiated"
 git add .
