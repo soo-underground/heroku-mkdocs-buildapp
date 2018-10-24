@@ -1,5 +1,5 @@
+echo "--------------------------------stage 3: pushing---------------"
 cd docpage-source/my-project/site
-ls
 rm -rf .git
 git init
 #echo "git initiated"
