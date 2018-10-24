@@ -12,5 +12,5 @@ echo $1
 git remote add build https://soo-underground:$1@github.com/soo-underground/soo-underground.github.io.git
 echo "password accepted, remote added"
 git remote -v
-git push --force origin master
+git push --force build master
 echo "artifacts pushed"
