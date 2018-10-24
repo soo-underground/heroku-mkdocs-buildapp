@@ -2,7 +2,7 @@ cd docpage-source/my-project/site
 ls
 rm -rf .git
 git init
-echo "git initiated"
+#echo "git initiated"
 git add .
 echo "repo added" #delay
 git config user.email "bordovskiy92@gmail.com"

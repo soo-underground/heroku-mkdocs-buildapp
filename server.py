@@ -9,9 +9,10 @@ import json
 import re
 
 
-#subprocess.call(['chmod a+x ../../app/1-source-retrieve.sh'], shell=True)
-#subprocess.call(['chmod a+x ../../app/2-build.sh'], shell=True)
-#subprocess.call(['chmod a+x ../../app/3-artifacts-push.sh'], shell=True)
+subprocess.call(['chmod a+x ../../app/1-source-retrieve.sh'], shell=True)
+subprocess.call(['chmod a+x ../../app/2-build.sh'], shell=True)
+subprocess.call(['chmod a+x ../../app/3-artifacts-push.sh'], shell=True)
+#making shell scripts available for calls
 
 
 application = Flask(__name__)
