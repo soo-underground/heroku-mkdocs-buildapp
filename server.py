@@ -50,10 +50,6 @@ def build_test(passwd):
     subprocess.call(['../../app/2-build.sh '], shell=True)
     subprocess.call(['../../app/3-artifacts-push.sh ' + passwd], shell=True)
     
-#    subprocess.call(['1-source-retrieve.sh '], shell=True)
-#    subprocess.call(['2-build.sh '], shell=True)
-#    subprocess.call(['3-artifacts-push.sh ' + passwd], shell=True)
-    
     return ("hello world", 200, None)    
 
 if __name__ == '__main__':
